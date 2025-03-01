@@ -2,8 +2,8 @@ var rngout = 1
 var redo = "redo"
 var rng = 10
 var hng = 0
-detectrainbow()
 hng = localStorage.getItem("hng")
+detectrainbow()
 
 
 document.getElementById("hng").innerHTML ="Highest number generated: " +hng
@@ -34,6 +34,7 @@ function rngswitch() {
 
 
 function rngdecide() {
+    detectrainbow()
     rngout = Math.floor(Math.random()* rng) +1
     document.getElementById("rng").innerHTML= rngout
      if (rngout>hng) {
