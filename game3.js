@@ -2,7 +2,7 @@ var c = document.getElementById("c");
 var ctx = c.getContext("2d");
 var matrixcolor = "#0f0"
 
-c.height = window.innerHeight - 60
+c.height = window.innerHeight
 c.width = window.innerWidth;
 
 //田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑
@@ -31,6 +31,8 @@ function btnswitch() {
     document.getElementById("fntswitch").style.borderColor = matrixcolor
     document.getElementById("home").style.color = matrixcolor
     document.getElementById("home").style.borderColor = matrixcolor
+    document.getElementById("skib").style.color = matrixcolor
+    document.getElementById("skib").style.borderColor = matrixcolor
 }
 
 function colorswitch() {
@@ -69,6 +71,11 @@ function draw()
 			drops[i] = 0;
 			drops[i]++;
 	}
+}
+
+function resize() {
+   c.height = window.innerHeight;
+   c.width = window.innerWidth;
 }
 
 setInterval(draw, font_size / 2 * 11);
