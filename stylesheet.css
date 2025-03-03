@@ -177,3 +177,13 @@ html {
     align-items: center;
     margin: 5px;
 }
+
+.image {
+    height: 35%;
+    width: 40%;
+}
+
+.rngimage {
+    height: 30%;
+    width: 40%;
+}
