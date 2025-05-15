@@ -1,10 +1,10 @@
-var rngout = 1
-var redo = "redo"
-var rng = 10
-var hng = 0
-hng = localStorage.getItem("hng")
-detectrainbow()
+var rngout = 1;
+var redo = "redo";
+var rng = 10;
+var hng = 0;
+hng = localStorage.getItem("hng");
 
+detectrainbow()
 
 document.getElementById("hng").innerHTML ="Highest number generated: " +hng
 
@@ -13,7 +13,7 @@ document.getElementById("rngswitch").innerHTML = ("Currently: 1-" + rng)
 
 function detectrainbow() {
     
-if (hng > 9999999) {
+if (hng > 999999) {
     document.getElementById("hng").classList.add("rainbow")
 
 

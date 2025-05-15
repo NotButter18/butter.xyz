@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'ScaryFont';
+    src: url('RavenSong.eot'); /* IE9 Compat Modes */
+    src: url('RavenSong.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('RavenSongt.woff') format('woff'), /* Modern Browsers */
+         url('RavenSong.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
 
 @keyframes colorRotate {
     from {
@@ -34,7 +42,7 @@
     }
   }
 
-  @keyframes colorRotate2 {
+@keyframes colorRotate2 {
     from {
       color: #6666ff;
     }
@@ -66,9 +74,36 @@
         color: #6666ff;
     }
   }
-  
+@keyframes moveButter {
+    0% { background-position: 0 0; }
+    100% { background-position: 220px 0; }
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.bg {
+    background-image: url(gold.png);
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    background-repeat: repeat;
+    background-size: 55px 50px;
+    background-position: 0 0;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+    animation: moveButter 20s linear infinite;
+    opacity: 0.5;
+}
+
 html {
-    background-color: rgb(226, 228, 213);
+    background: rgb(226, 228, 213);
     text-align: center;
 }
 
@@ -98,7 +133,12 @@ html {
     font-family: "Montserrat";
     align-items: center;
     margin: 5px;
-    
+}
+
+
+.button:hover {
+    border-color: rgba(0, 0, 0, .7);
+    background-color: rgb(218, 140, 52);
 }
 
 .matrixbutton {
@@ -142,11 +182,6 @@ html {
 
 }
 
-.button:hover {
-    border-color: rgba(0, 0, 0, .7);
-    background-color: rgb(218, 140, 52);
-}
-
 .p1 {
     font-weight: 450;
     font-size: large;
@@ -181,20 +216,34 @@ html {
 .image {
     height: 35%;
     width: 40%;
+    transition: .3s;
+}
+
+.image:hover {
+    height: 37%;
+    width: 42%;
+    filter:drop-shadow(0px 0px 10px rgba(47, 48, 48, 0.7))
 }
 
 .rngimage {
     height: 30%;
     width: 40%;
+    transition: .3s;
+}
+
+.rngimage:hover {
+    height: 32%;
+    width: 42%;
+    filter:drop-shadow(0px 0px 10px rgba(47, 48, 48, 0.7))
 }
 
 #colourhexagon {
-    width: 100%;
-    height: 100%;
+    width: 65%;
+    height: 65%;
 }
 
 .intro {
-    position: absolute;
+    position: fixed;
     top: 0vh;
     left: 0vh;
     width: 100%;
@@ -226,10 +275,132 @@ html {
     text-align: center;
     color: rgb(255, 255, 255);
     position: absolute; 
-    top: 46%;
+    top: 48%;
     left: 0; 
     right: 0; 
     margin-inline: auto; 
     width: fit-content;
     z-index: 10;
+}
+
+.scarytitle {
+    font-family: "ScaryFont";
+    font-size: x-large;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+
+}
+
+.scarytext {
+    font-family: "ScaryFont";
+    font-size: 25px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.jackterface {
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    background-color: rgba(53, 50, 44, 0.5);
+    width: 1000;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 100;
+    padding: 15px
+}
+
+.scarybutton {
+    color: white;
+    background-color: rgba(43, 41, 39, 0.5);
+    outline-width: 0px;
+    border-radius: 5px;
+    font-family: "ScaryFont";
+    align-items: center;
+    margin: 5px;
+    border-style: solid;
+}
+
+.scarybutton:hover {
+    color: rgb(255, 0, 0);
+    background-color: rgb(0, 0, 0); 
+    outline-width: 0px;
+    border-radius: 5px;
+    font-family: "ScaryFont";
+    align-items: center;
+    margin: 5px;
+    border-style: solid;
+}
+
+#lastupd {
+    font-family: monospace;
+    font-size: 50%;
+}
+
+.upgrdiv {
+    font-family: "Montserrat";
+    background-color: rgb(236, 209, 148);
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 450;
+    font-size: smaller;
+    padding: 15px;
+    animation: fadein 1s linear;
+}
+
+.upgrdivnone {
+    display: none;
+}
+
+.buybutton {
+    background-color: rgb(241, 171, 90);
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    font-family: "Montserrat";
+    align-items: center;
+    padding: 5px;
+}
+
+
+.buybutton:hover {
+    border-color: rgba(0, 0, 0, .7);
+    background-color: rgb(218, 140, 52);
+}
+
+#butterclick {
+    height: 40%;
+    width: 40%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#butterclick:hover {
+    height: 42%;
+    width: 42%;
+    cursor: pointer;
+    filter:drop-shadow(10px 20px 5px rgba(47, 48, 48, 0.7))
+}
+
+#butterclick:active,
+#butterclick.active  {
+    height: 39%;
+    width: 39%;
+    cursor: pointer;
+    transition: 0s;
+    filter:drop-shadow(10px 20px 5px rgba(47, 48, 48, 0))
+
+}
+
+#poop {
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 2px white;
+    size: 15%;
+}
+
+#disclaimer {
+    font-weight: 75;
 }

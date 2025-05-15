@@ -38,7 +38,6 @@ function butterRotate() {
     } else if(counter == 9) {
         header.innerHTML = "butter.xy🧈"
         counter = 0
-        cyclecount = cyclecount + 1
     } 
 
 
@@ -48,3 +47,4 @@ function butterRotate() {
     }
 }
 
+addEventListener("DOMContentLoaded", (event) => {cyclecount = 2});

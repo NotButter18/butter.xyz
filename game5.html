@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jack</title>
+</head>
+<style>
+html{
+    background-color: rgb(11, 10, 14); 
+    background-image: url(jackground.png);
+    height: 100%;
+    width: 100%;
+}
+</style>
+<body>
+    <div class="scarybg"></div>
+    <div  class="scarytitle">
+        <h1>
+            jack
+        </h1>
+    </div>
+    <div class="jackterface">
+        <h2 class="scarytext">Jack</h2>
+        <p class="p1" id="jackamount">0</p>
+        <br>
+        <p class="p1" id="jackcardsdisplay"></p>
+        <br>
+        <h2 class="scarytext">You</h2>
+        <p class="p1" id="youramount">0</p>
+        <br>
+        <p class="p1" id="plrcardsdisplay"></p>
+        <br>
+        <h1 class="jgs"><p class = "scarytext"id="winq"> ??? </p></h1> 
+        
+        <button onclick="givecardtoplayer()" class="scarybutton" id="hit">
+            Hit
+        </button>
+        <button onclick="stand()" class="scarybutton" id="stand">
+            Stand
+        </button>
+        <button onclick="startgame()" class="scarybutton" id="start">
+            Start
+        </button>
+        <button onclick="ng()" class="scarybutton" id="ng">
+            Reset
+        </button>
+        <br>
+        <a href="index.html">
+            <button class="scarybutton">
+                Home
+            </button>
+        </a>
+        
+    </div>
+   <script src="game5.js"></script>
+</body>
+</html>

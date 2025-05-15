@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clicker</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="title">
+        <h1>
+            click or die of starvation
+        </h1>
+    </div>
+    <div class="desc">
+        <h3 class="p1" id="moneyp">drops of butter: none🤣</h3>
+        <img draggable="false" src="butterclick.png" onclick="clickbutton()" id="butterclick">
+            
+        </img>
+        <br>
+        <div class="upgrdivnone" id="upgr1">
+            <h3>
+                "butterfingers" - learn the art of churning butter.
+            </h3>
+            <p>
+                Gain 1 more butter drop per click.
+            </p>
+            <button onclick="upgr1()" class="buybutton" id="buy1" aria-hidden="true" tabindex="-1">
+                buy(10 DoB)           
+            </button>
+        </div>
+        <br>
+        <div class="upgrdivnone" id="upgr2">
+            <h3>
+                "The CreamChurner-3000" - mechanize the creation of butter.
+            </h3>
+            <p>
+                Gain 10 more butter drops per click and 5 more drops every second.
+            </p>
+            <button onclick="upgr2()" class="buybutton" id="buy2" aria-hidden="true" tabindex="-1">
+                buy(500 DoB)           
+            </button>
+        </div>
+        <br>
+        <div class="upgrdivnone" id="upgr3">
+            <h3>
+                "Buttereolagy"  - study the ways of the butter master.
+            </h3>
+            <p>
+                Gain 50 more butter drops per click and 15 more drops every second.
+            </p>
+            <button onclick="upgr3()" class="buybutton" id="buy3" aria-hidden="true" tabindex="-1">
+                buy(5000 DoB)           
+            </button>
+        </div>
+        <small id="disclaimer">we will add more upgrades over time</small>
+        <br>
+            <a href="index.html">
+                <button class="button">
+                    Home
+                </button>
+            </a>
+            </div>
+    </div>
+    <script src="game6.js"></script> 
+ </body>     
+</html>
+<!-- <div id="perks">
+            <h2>Golden Stick</h2>
+            <p>
+                Every 100 clicks the butter will turn 
+                <br>
+                golden giving you a 10x payout for one click
+            </p>
+        </div>
+         -->
